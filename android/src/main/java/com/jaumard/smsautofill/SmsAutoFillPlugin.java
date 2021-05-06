@@ -188,7 +188,7 @@ public class SmsAutoFillPlugin implements MethodCallHandler {
                         if (status.getStatusCode() == CommonStatusCodes.SUCCESS) {
                             // Get SMS message contents
                             String message = (String) extras.get(SmsRetriever.EXTRA_SMS_MESSAGE);
-                            Pattern pattern = Pattern.compile("\\d{4,6}");
+                            Pattern pattern = Pattern.compile("\\d{4,8}");
                             if (message != null) {
                                 Matcher matcher = pattern.matcher(message);
 
